@@ -104,6 +104,8 @@ const UserData = () => {
                 description: "",
                 status: "success",
                 position: "top",
+            
+
                 duration: 2000,
                 isClosable: true,
             });
@@ -225,7 +227,7 @@ const UserData = () => {
                     </form>
                 </div>
 
-            
+
                 <div id={style.detail_maindiv}>
                     <div id={style.carddiv}>
                         <h1>All Students Details</h1>
