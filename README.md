@@ -1,4 +1,4 @@
-# TypeScriptCrudapp
+# TypeScript Crud Application
 
 successfully developed a comprehensive TypeScript CRUD Application, combining the strengths of Node.js, Express, and MongoDB for the backend. To enhance the frontend, I utilized React and TypeScript, while Chakra UI provided a sleek and stylish design. The app seamlessly integrates all CRUD operations, empowering efficient data management and manipulation.
 ## Deployment Link :https://frontend-suhail3535.vercel.app/
