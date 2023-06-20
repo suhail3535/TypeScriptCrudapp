@@ -4,6 +4,7 @@ const connection = mongoose.connect("mongodb+srv://khansohail015:crudapp@cluster
 const userSchema = mongoose.Schema(
     {
         name: String,
+        email:String,
         course: String,
         age: Number,
         mobile: Number,

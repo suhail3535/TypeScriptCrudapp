@@ -1,27 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+* {
+    font-family: "Bree Serif", serif;
+}
+
+#heading {
+    background-color: rgb(78, 243, 177);
+    height: 100px;
+    position: relative;
+}
+#heading h2 {
+    position: absolute;
+    left: 0px;
+    top: 25px;
+    font-weight: bold;
+    font-size: 30px;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: detailsheading;
+}
+@keyframes detailsheading {
+    from {
+        left: 200;
+    }
+    to {
+        left: 60%;
+    }
+}
 #main_container {
     border: 0px solid green;
-display: flex;
-justify-content: space-between;
-    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
 }
 #formdiv {
     border: 0px solid rgb(0, 81, 255);
-    width: 40%;
+    width: 30%;
     padding: 20px;
-    margin: auto;
+
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#carddiv {
 
-    border: 0px solid rgb(255, 0, 25);
-    width: 50%;
-
-
+#detail_maindiv {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 20px;
 }
 #childrendiv {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
         rgb(209, 213, 219) 0px 0px 0px 1px inset;
-        border: 1px solid rgb(124, 128, 0);
+    border: 1px solid rgb(124, 128, 0);
 }
 .table {
     /* border: 0.5px solid #ccc; */
@@ -48,8 +75,48 @@ th {
     padding: 10px; /* cellpadding */
     border: 0.5px solid #ccc;
 }
-h1{
+h1 {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+    margin-bottom: 20px;
+}
+#submit {
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    width: 30%;
+    margin: 20px auto;
+    margin-left: 150px;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: blue;
+    transition: 0.5;
+    color: white;
+}
+.update {
+    background-color: rgb(117, 243, 58);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.update:hover {
+    background-color: rgb(94, 191, 50);
+}
+.delete {
+    background-color: rgba(243, 71, 28, 0.814);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.delete:hover {
+    background-color: rgb(255, 0, 0);
 }
