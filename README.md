@@ -1,6 +1,6 @@
 # FullstackCrudapp
 
-I successfully developed a comprehensive TypeScript CRUD Application, combining the strengths of Node.js, Express, and MongoDB for the backend. To enhance the frontend, I utilized React and TypeScript, while Chakra UI provided a sleek and stylish design. The app seamlessly integrates all CRUD operations, empowering efficient data management and manipulation.
+successfully developed a comprehensive TypeScript CRUD Application, combining the strengths of Node.js, Express, and MongoDB for the backend. To enhance the frontend, I utilized React and TypeScript, while Chakra UI provided a sleek and stylish design. The app seamlessly integrates all CRUD operations, empowering efficient data management and manipulation.
 ## Deployment Link :https://frontend-suhail3535.vercel.app/
 
 
@@ -49,13 +49,15 @@ npm run deploy
 
 
 
+
+
 ## ScreenShots
 ### 1. Homepage
-![home](https://user-images.githubusercontent.com/110021464/222483483-7eb2c6ac-b8d7-447d-89e6-19ed1845c597.png)
-### 2. Women Page
-![women page](https://user-images.githubusercontent.com/112754439/230735194-96b2d41e-9905-4d4e-99a9-428d9c9590b6.png)
-### 3. Men Page
-![men page](https://user-images.githubusercontent.com/112754439/230735192-56b02fa9-a0c5-45f9-a49e-453b565cbbad.png)
+![pic](https://github.com/suhail3535/TypeScriptCrudapp/assets/112754439/ba1ee1f4-04b9-48a6-a547-1ab31bbe6b1b)
+### 2. Students Details Add Section
+![adddata](https://github.com/suhail3535/TypeScriptCrudapp/assets/112754439/6585a219-09e3-499c-806c-164d6622055c)
+### 3. All Students Details Section
+![alldetails](https://github.com/suhail3535/TypeScriptCrudapp/assets/112754439/aba1f685-1203-454b-b054-e9f55e145501)
 
 
 
