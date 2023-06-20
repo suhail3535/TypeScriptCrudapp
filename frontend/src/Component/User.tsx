@@ -4,11 +4,12 @@ import { Data } from "./Constant";
 import style from "./User.module.css";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { useToast } from "@chakra-ui/react";
+import { Button, Progress, useToast } from "@chakra-ui/react";
 import { FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
 
 const UserData = () => {
     const [user, setUser] = useState<Data[]>([]);
+    const[loading,setLoading]=useState(true)
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [age, setAge] = useState<number | undefined>(undefined);
@@ -42,10 +43,12 @@ const UserData = () => {
     };
     //Get all data Request Function(GET Request)
     const getData = async () => {
+        setLoading(true)
         try {
             const response = await axios.get(
                 "https://silly-pear-goat.cyclic.app/user"
             );
+            setLoading(false)
             console.log("getuser", response.data);
             setUser(response.data);
         } catch (error) {
@@ -136,16 +139,15 @@ const UserData = () => {
 
     useEffect(() => {
         getData();
+        setLoading(loading)
     }, []);
 
     return (
         <div>
             <div id={style.heading}>
-
                 <h2>Welcome to Students Management System</h2>
             </div>
             <div id={style.main_container}>
-
                 <div id={style.formdiv}>
                     <h1>Add New Student</h1>
                     <form onSubmit={handleSubmit}>
@@ -229,7 +231,6 @@ const UserData = () => {
                     </form>
                 </div>
 
-
                 <div id={style.detail_maindiv}>
                     <div id={style.carddiv}>
                         <h1>All Students Details</h1>
@@ -247,48 +248,53 @@ const UserData = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {user.map((item) => (
-                                    <tr key={item._id}>
-                                        <td>{item.name}</td>
-                                        <td>{item.email}</td>
-                                        <td>{item.age}</td>
-                                        <td>{item.course}</td>
-                                        <td>{item.gender}</td>
-                                        <td>{item.mobile}</td>
-                                        <td>
-                                            <button
-                                                className={style.update}
-                                                onClick={() =>
-                                                    handleUpdate(item._id)
-                                                }>
-                                                Edit
-                                                <FaEdit
-                                                    style={{
-                                                        marginTop: "5px",
-                                                        marginLeft: "8px",
-                                                        color: "black",
-                                                    }}
-                                                />
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button
-                                                className={style.delete}
-                                                onClick={() =>
-                                                    deleteData(item._id)
-                                                }>
-                                                Delete
-                                                <MdDelete
-                                                    style={{
-                                                        marginTop: "5px",
-                                                        marginLeft: "8px",
-                                                        color: "black",
-                                                    }}
-                                                />
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))}
+                                {loading ? (
+                                    <h1 style={{textAlign:"center"}}>Please wait,Loading........</h1>
+
+                                ) : (
+                                    user.map((item) => (
+                                        <tr key={item._id}>
+                                            <td>{item.name}</td>
+                                            <td>{item.email}</td>
+                                            <td>{item.age}</td>
+                                            <td>{item.course}</td>
+                                            <td>{item.gender}</td>
+                                            <td>{item.mobile}</td>
+                                            <td>
+                                                <button
+                                                    className={style.update}
+                                                    onClick={() =>
+                                                        handleUpdate(item._id)
+                                                    }>
+                                                    Edit
+                                                    <FaEdit
+                                                        style={{
+                                                            marginTop: "5px",
+                                                            marginLeft: "8px",
+                                                            color: "black",
+                                                        }}
+                                                    />
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button
+                                                    className={style.delete}
+                                                    onClick={() =>
+                                                        deleteData(item._id)
+                                                    }>
+                                                    Delete
+                                                    <MdDelete
+                                                        style={{
+                                                            marginTop: "5px",
+                                                            marginLeft: "8px",
+                                                            color: "black",
+                                                        }}
+                                                    />
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))
+                                )}
                             </tbody>
                         </table>
                     </div>
