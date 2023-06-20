@@ -28,37 +28,31 @@
     }
 }
 #main_container {
-    border: 2px solid green;
+
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
 }
 #formdiv {
-    border: 1px solid rgb(0, 81, 255);
+
     width: 30%;
     padding: 20px;
-
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #detail_maindiv {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px 20px;
-    border: 5px solid yellow;
-}
-#childrendiv {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
-        rgb(209, 213, 219) 0px 0px 0px 1px inset;
 
 }
+
 .table {
-    /* border: 0.5px solid #ccc; */
     border-radius: 5px;
     border-collapse: separate;
-    border-spacing: 10px; /* cellspacing */
+    border-spacing: 10px;
     padding: 10px;
     margin: auto;
-    border: 2px solid rgb(255, 0, 115);
+
 }
 .table > thead > tr > th {
     border: 0.5px solid #ccc;
@@ -100,7 +94,7 @@ h1 {
     color: white;
 }
 .update {
-    background-color: rgb(117, 243, 58);
+    background-color: rgb(101, 235, 39);
     padding: 5px 10px;
     color: white;
     border-radius: 5px;
@@ -108,7 +102,8 @@ h1 {
     justify-content: space-between;
 }
 .update:hover {
-    background-color: rgb(94, 191, 50);
+    background-color: rgb(84, 255, 5);
+    color: black;
 }
 .delete {
     background-color: rgba(243, 71, 28, 0.814);
@@ -120,150 +115,8 @@ h1 {
 }
 .delete:hover {
     background-color: rgb(255, 0, 0);
-}
-
-@media screen and (min-width:300px) and (max-width:420px) {
-#main_container {
-    border: 2px solid rgb(128, 0, 0);
-    display: block;
-    margin-top: 10px;
-}
-#formdiv {
-    border: 1px solid rgb(0, 81, 255);
-    width: 95%;
-    margin: auto;
-    padding: 20px;
-
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-#detail_maindiv {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px 20px;
-    border: 5px solid rgb(0, 51, 255);
-    width: 100%;
-    margin: auto;
-}
-.table {
-    /* border: 0.5px solid #ccc; */
-    border-radius: 5px;
-    border-collapse: separate;
-    border-spacing: 10px; /* cellspacing */
-    padding: 10px;
-    margin: auto;
-    border: 2px solid rgb(255, 0, 115);
-}
-.table > thead > tr > th {
-    border: 0.5px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-.table > tbody > tr > td {
-    border: 0.5px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-td,
-th {
-    padding: 10px; /* cellpadding */
-    border: 0.5px solid #ccc;
-}
-}
-@media screen and (min-width:421px) and (max-width:767px) {
-#main_container {
-    border: 2px solid rgb(128, 0, 0);
-    display: block;
-    margin-top: 10px;
-}
-#formdiv {
-    border: 1px solid rgb(0, 81, 255);
-    width: 95%;
-    margin: auto;
-    padding: 20px;
-
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.table {
-    /* border: 0.5px solid #ccc; */
-    border-radius: 5px;
-    border-collapse: separate;
-    border-spacing: 10px; /* cellspacing */
-    padding: 10px;
-    margin: auto;
-    border: 2px solid rgb(255, 0, 115);
-}
-.table > thead > tr > th {
-    border: 0.5px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-.table > tbody > tr > td {
-    border: 0.5px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-td,
-th {
-    padding: 10px; /* cellpadding */
-    border: 0.5px solid #ccc;
-}
-#detail_maindiv {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px 20px;
-    border: 5px solid rgb(0, 51, 255);
-    width: 100%;
-    margin: auto;
+    color: black;
 }
 
 
-}
-@media screen and (min-width:768px) and (max-width:1280px) {
-#main_container {
-    border: 2px solid rgb(128, 0, 0);
-    display: block;
-    margin-top: 10px;
-}
-#formdiv {
-    border: 1px solid rgb(0, 81, 255);
-    width: 95%;
-    margin: auto;
-    padding: 20px;
 
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-#detail_maindiv {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px 20px;
-    border: 5px solid rgb(0, 51, 255);
-    width: 100%;
-    margin: auto;
-}
-.table {
-    /* border: 0.5px solid #ccc; */
-    border-radius: 5px;
-    border-collapse: separate;
-    border-spacing: 10px; /* cellspacing */
-    padding: 10px;
-    margin: auto;
-    border: 2px solid rgb(255, 0, 115);
-}
-.table > thead > tr > th {
-    border: 0.5px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-.table > tbody > tr > td {
-    border: 0.5px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-td,
-th {
-    padding: 10px; /* cellpadding */
-    border: 0.5px solid #ccc;
-}
-}

@@ -137,11 +137,11 @@ const UserData = () => {
     return (
         <div>
             <div id={style.heading}>
-                {" "}
-                <h2>Welcome to Students Management System</h2>{" "}
+
+                <h2>Welcome to Students Management System</h2>
             </div>
             <div id={style.main_container}>
-                {/* //Form Input div */}
+
                 <div id={style.formdiv}>
                     <h1>Add New Student</h1>
                     <form onSubmit={handleSubmit}>
@@ -225,7 +225,7 @@ const UserData = () => {
                     </form>
                 </div>
 
-                {/* Students details DIV */}
+            
                 <div id={style.detail_maindiv}>
                     <div id={style.carddiv}>
                         <h1>All Students Details</h1>
