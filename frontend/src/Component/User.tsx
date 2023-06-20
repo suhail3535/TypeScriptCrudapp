@@ -16,16 +16,17 @@ const UserData = () => {
     const [mobile, setMobile] = useState<number | undefined>(undefined);
     const [course, setCourse] = useState("");
     const [updateId, setUpdateId] = useState<number | null>(null);
-const toast = useToast();
+    const toast = useToast();
     const newData = {
         name: name,
-        email:email,
+        email: email,
         gender: gender,
         age: age,
         course: course,
         mobile: mobile,
     };
 
+    //Post new students  Request Function(Post Request)
     const postData = async () => {
         try {
             const response = await axios.post(
@@ -39,7 +40,7 @@ const toast = useToast();
             console.log(error);
         }
     };
-
+    //Get all data Request Function(GET Request)
     const getData = async () => {
         try {
             const response = await axios.get("http://localhost:8080/user");
@@ -49,7 +50,7 @@ const toast = useToast();
             console.log(error);
         }
     };
-
+    //Delete  Request Function(DELETE Request)
     const deleteData = async (_id: number) => {
         try {
             const response = await axios.delete(
@@ -62,6 +63,7 @@ const toast = useToast();
         }
     };
 
+    //Patch Request Function(PATCH Request)
     const updateData = async () => {
         try {
             const response = await axios.patch(
@@ -76,7 +78,7 @@ const toast = useToast();
             console.log(error);
         }
     };
-
+    //Used for collecting data from from details in Input tags
     const handleUpdate = (_id: number) => {
         const selectedItem: Data | undefined = user.find(
             (item) => item._id === _id
@@ -92,36 +94,33 @@ const toast = useToast();
         }
     };
 
+    //Details Post/Update Fuction
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (updateId) {
             updateData();
-                toast({
-                    title: "Details Updated successfully.",
-                    description: "",
-                    status: "success",
-                    position: "top",
-                    duration: 2000,
-                    isClosable: true,
-                });
+            toast({
+                title: "Details Updated successfully.",
+                description: "",
+                status: "success",
+                position: "top",
+                duration: 2000,
+                isClosable: true,
+            });
         } else {
             postData();
-                toast({
-                    title: "Details Added successfully.",
-                    description: "",
-                    status: "success",
-                    position: "top",
-                    duration: 2000,
-                    isClosable: true,
-                });
+            toast({
+                title: "Details Added successfully.",
+                description: "",
+                status: "success",
+                position: "top",
+                duration: 2000,
+                isClosable: true,
+            });
         }
-
-
-
-
-
     };
 
+    //Use for clear input after details Added/Updated Fuction
     const clearForm = () => {
         setName("");
         setAge(undefined);
@@ -288,7 +287,6 @@ const toast = useToast();
                                 ))}
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
