@@ -16,7 +16,7 @@ successfully developed a comprehensive TypeScript CRUD Application, combining th
 
 ## Tech Stack
 
-**Front-end :** ,TypeScript,React, Chakra UI, React icon.
+**Front-end :** TypeScript,React, Chakra UI, React icon.
 
 **Back-end :** Node.js, Express, and MongoDB.
 
