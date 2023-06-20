@@ -1,13 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Data } from "./Constant";
+import style from "./User.module.css";
+import { FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
 
 const UserData = () => {
     const [user, setUser] = useState<Data[]>([]);
     const [name, setName] = useState("");
     const [age, setAge] = useState<number | undefined>(undefined);
     const [gender, setGender] = useState("");
-    const [mobile, setMobile] = useState<number | undefined>(undefined);;
+    const [mobile, setMobile] = useState<number | undefined>(undefined);
     const [course, setCourse] = useState("");
     const [updateId, setUpdateId] = useState<number | null>(null);
 
@@ -106,86 +108,113 @@ const UserData = () => {
     }, []);
 
     return (
-        <div>
-            <h1>UserData</h1>
-            <form onSubmit={handleSubmit}>
-                <label>Name:</label>
-                <input
-                    type="text"
-                    placeholder="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                <br />
-                <label>Age:</label>
-                <input
-                    type="number"
-                    placeholder="age"
-                    value={age !== undefined ? age.toString() : ""}
-                    onChange={(e) => setAge(parseInt(e.target.value))}
-                    required
-                />
-                <br />
-                <label>Course:</label>
-                <input
-                    type="text"
-                    placeholder="course"
-                    value={course}
-                    onChange={(e) => setCourse(e.target.value)}
-                    required
-                />
-                <br />
-                <label>Gender:</label>
-                <input
-                    type="text"
-                    placeholder="gender"
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    required
-                />
-                <br />
-                <label>Mobile:</label>
-                <input
-                    type="text"
-                    placeholder="Mobile"
-                    value={mobile !== undefined ? mobile.toString() : ""}
-                    onChange={(e) => setMobile(parseInt(e.target.value))}
-                    required
-                />
-                <br />
-                <input type="submit" value={updateId ? "Update" : "Submit"} />
-            </form>
-            <hr />
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "20px",
-                }}>
-                {user.map((item) => {
-                    return (
-                        <div
-                            key={item._id}
-                            style={{
-                                border: "1px dotted gray",
-                                padding: "10px",
-                                textAlign: "center",
-                            }}>
-                            <h1>{item.name}</h1>
-                            <p>{item.age}</p>
-                            <p>{item.course}</p>
-                            <p>{item.gender}</p>
-                            <p>{item.mobile}</p>
-                            <button onClick={() => handleUpdate(item._id)}>
-                                Edit
-                            </button>
-                            <button onClick={() => deleteData(item._id)}>
-                                Delete
-                            </button>
-                        </div>
-                    );
-                })}
+        <div id={style.main_container}>
+            <div id={style.formdiv}>
+                <h1>Add New Student</h1>
+                <form onSubmit={handleSubmit}>
+                    <FormControl>
+                        <FormLabel>Email address</FormLabel>
+                        <Input
+                            type="text"
+                            placeholder="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Age</FormLabel>
+                        <Input
+                            type="number"
+                            placeholder="age"
+                            value={age !== undefined ? age.toString() : ""}
+                            onChange={(e) => setAge(parseInt(e.target.value))}
+                            required
+                        />
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Course</FormLabel>
+                        <Input
+                            type="text"
+                            placeholder="course"
+                            value={course}
+                            onChange={(e) => setCourse(e.target.value)}
+                            required
+                        />
+                    </FormControl>
+                    <FormControl>
+                        <FormLabel>Gender</FormLabel>
+                        <Select
+                            placeholder="Select country"
+                            value={gender}
+                            onChange={(e) => setGender(e.target.value)}
+                            required>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Mobile</FormLabel>
+                        <Input
+                            type="number"
+                            placeholder="Mobile"
+                            value={
+                                mobile !== undefined ? mobile.toString() : ""
+                            }
+                            onChange={(e) =>
+                                setMobile(parseInt(e.target.value))
+                            }
+                            required
+                        />
+                    </FormControl>
+                    <input
+                        type="submit"
+                        value={updateId ? "Update" : "Submit"}
+                    />
+                </form>
+                h
+            </div>
+
+            <div id={style.carddiv}>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Gender</th>
+                            <th>Mobile</th>
+                            <th>Actions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {user.map((item) => (
+                            <tr key={item._id}>
+                                <td>{item.name}</td>
+                                <td>{item.age}</td>
+                                <td>{item.course}</td>
+                                <td>{item.gender}</td>
+                                <td>{item.mobile}</td>
+                                <td>
+                                    <button
+                                        onClick={() => handleUpdate(item._id)}>
+                                        Edit
+                                    </button>
+                                </td>
+                                <td>
+                                    <button
+                                        onClick={() => deleteData(item._id)}>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     );
