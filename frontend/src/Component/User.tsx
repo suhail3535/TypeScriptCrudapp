@@ -30,7 +30,7 @@ const UserData = () => {
     const postData = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:8080/user/add",
+                "https://silly-pear-goat.cyclic.app/user/add",
                 newData
             );
             console.log(response.data);
@@ -43,7 +43,9 @@ const UserData = () => {
     //Get all data Request Function(GET Request)
     const getData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/user");
+            const response = await axios.get(
+                "https://silly-pear-goat.cyclic.app/user"
+            );
             console.log("getuser", response.data);
             setUser(response.data);
         } catch (error) {
@@ -54,7 +56,7 @@ const UserData = () => {
     const deleteData = async (_id: number) => {
         try {
             const response = await axios.delete(
-                `http://localhost:8080/user/delete/${_id}`
+                `https://silly-pear-goat.cyclic.app/user/delete/${_id}`
             );
             console.log(response.data);
             getData();
@@ -67,7 +69,7 @@ const UserData = () => {
     const updateData = async () => {
         try {
             const response = await axios.patch(
-                `http://localhost:8080/user/update/${updateId}`,
+                `https://silly-pear-goat.cyclic.app/user/update/${updateId}`,
                 newData
             );
             console.log(response.data);
@@ -104,7 +106,7 @@ const UserData = () => {
                 description: "",
                 status: "success",
                 position: "top",
-            
+
 
                 duration: 2000,
                 isClosable: true,
