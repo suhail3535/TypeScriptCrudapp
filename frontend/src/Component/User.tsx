@@ -37,6 +37,7 @@ const UserData = () => {
             console.log(response.data);
             clearForm();
             getData();
+            setLoading(false);
         } catch (error) {
             console.log(error);
         }
@@ -62,7 +63,9 @@ const UserData = () => {
                 `https://silly-pear-goat.cyclic.app/user/delete/${_id}`
             );
             console.log(response.data);
+
             getData();
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -78,7 +81,10 @@ const UserData = () => {
             console.log(response.data);
             clearForm();
             setUpdateId(null);
+
             getData();
+            setLoading(false);
+
         } catch (error) {
             console.log(error);
         }
