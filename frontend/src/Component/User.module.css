@@ -119,4 +119,82 @@ h1 {
 }
 
 
+@media screen and (min-width:300px) and (max-width:420px) {
+#main_container {
 
+    display: block;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+overflow: hidden;
+}
+#formdiv {
+
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#detail_maindiv {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 20px;
+width: 90%;
+margin: auto;
+}
+
+
+}
+
+@media screen and (min-width:421px) and (max-width:768px) {
+#main_container {
+
+    display: block;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+overflow: hidden;
+}
+#formdiv {
+
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#detail_maindiv {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 20px;
+width: 90%;
+margin: auto;
+}
+
+
+}
+@media screen and (min-width:769px) and (max-width:1024px) {
+#main_container {
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+overflow: hidden;
+}
+#formdiv {
+
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#detail_maindiv {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 20px;
+width: 90%;
+margin: auto;
+}
+
+
+}
