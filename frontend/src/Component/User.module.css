@@ -7,11 +7,12 @@
     background-color: rgba(113, 238, 188, 0.653);
     height: 100px;
     position: relative;
+
 }
 #heading h2 {
     position: absolute;
     background: linear-gradient(to right, #3399ff, #9933ff,#6600cc);
-    -webkit-background-clip: text;
+ -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: none;
 
@@ -19,10 +20,10 @@
     top: 25px;
     font-weight: bold;
     font-size: 30px;
-    animation-duration: 12s;
+     animation-duration: 12s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-name: detailsheading;
+    animation-name: detailsheading; 
 }
 @keyframes detailsheading {
     from {
