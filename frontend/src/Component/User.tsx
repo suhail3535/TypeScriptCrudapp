@@ -65,6 +65,14 @@ const UserData = () => {
             console.log(response.data);
 
             getData();
+            toast({
+                title: "Data Deleted successfully.",
+                description: "",
+                status: "success",
+                position: "top",
+                duration: 2000,
+                isClosable: true,
+            });
             setLoading(false)
         } catch (error) {
             console.log(error);
