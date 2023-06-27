@@ -1,7 +1,7 @@
 # TypeScript Crud Application
 
 successfully developed a comprehensive TypeScript CRUD Application, combining the strengths of Node.js, Express, and MongoDB for the backend. To enhance the frontend, I utilized React and TypeScript, while Chakra UI provided a sleek and stylish design. The app seamlessly integrates all CRUD operations, empowering efficient data management and manipulation.
-## Deployment Link :https://64997f01078a8007b3927934--chimerical-capybara-079636.netlify.app/
+## Deployment Link :https://649a4e10ce5a7628c1de0ffd--starlit-bublanina-a89a76.netlify.app/
 
 
 
@@ -10,7 +10,7 @@ successfully developed a comprehensive TypeScript CRUD Application, combining th
 #### Get all items
 
 ```http
-  GET https://64997f01078a8007b3927934--chimerical-capybara-079636.netlify.app/
+  GET https://649a4e10ce5a7628c1de0ffd--starlit-bublanina-a89a76.netlify.app/ 
 ```
 
 
@@ -96,7 +96,7 @@ Start the server
 
 
 ## Demo
-https://64997f01078a8007b3927934--chimerical-capybara-079636.netlify.app/
+https://649a4e10ce5a7628c1de0ffd--starlit-bublanina-a89a76.netlify.app/
 
 
 
